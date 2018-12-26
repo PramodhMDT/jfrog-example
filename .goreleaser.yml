@@ -34,7 +34,7 @@ changelog:
     - '^docs:'
     - '^test:'
 snapshot:
-  name_template: 'build-{{ .Env.CIRCLE_BUILD_NUM }}'
+  name_template: 'build-{{ .Tag }}-{{ .Date }}'
 
 puts:
   - name: bintray

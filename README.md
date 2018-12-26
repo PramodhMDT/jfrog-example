@@ -79,9 +79,9 @@ Although GoReleaser has [a built-in support for Artifactory](https://goreleaser.
 
 1. First, you'll need a generic repository for the executables. Click Local Repository under *Create Repositories* in your username drop-down menu in Artifactory UI, and select Generic. We'll call it `binary-releases-local`.
 
-2. Next, let's init GoReleaser
+2. [Optional] You can create your own version of the GoReleaser configuration file (`.goreleaser.yml`) if you want. You can also use the version that is already in this repository
 
-`> goreleaser init`
+`> rm .goreleaser.yml && goreleaser init`
 
 3. Now let's create the binaries. We'll run GoReleaser with `--snapshot` flag to generate the binaries, but skip the deployment.
 
