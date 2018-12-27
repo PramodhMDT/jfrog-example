@@ -8,6 +8,7 @@ action "Step1 - Get sources" {
   secrets = ["URL", "USER", "PASSWORD"]
   env = {
     COMMAND = "go build go --no-registry"
+    CRED = "username"
   }
 }
 
@@ -17,6 +18,7 @@ action "Step2 - Publish modules" {
   secrets = ["URL", "USER", "PASSWORD"]
   env = {
     COMMAND = "go-publish go --self=false --deps=all"
+    CRED = "username"
   }
 }
 
@@ -26,6 +28,7 @@ action "Step3 - Build Info" {
   secrets = ["URL", "USER", "PASSWORD"]
   env = {
     COMMAND = "go build go --build-name=my-build --build-number=1"
+    CRED = "username"
   }
 }
 
