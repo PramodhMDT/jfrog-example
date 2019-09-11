@@ -1,7 +1,7 @@
 workflow "New workflow" {
   on = "push"
   resolves = ["Step4 - Run app"]
-}
+} 
 
 action "Step1 - Get sources" {
   uses = "retgits/actions/jfrog-cli-go@master"
